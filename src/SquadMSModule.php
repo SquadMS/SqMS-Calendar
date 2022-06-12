@@ -2,8 +2,8 @@
 
 namespace SquadMS\Calendar;
 
+use Illuminate\Support\Facades\Config;
 use SquadMS\Foundation\Modularity\Contracts\SquadMSModule as SquadMSModuleContract;
-
 
 class SquadMSModule extends SquadMSModuleContract
 {
