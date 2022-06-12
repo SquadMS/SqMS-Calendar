@@ -41,7 +41,6 @@
         "laravel": {
             "providers": [
                 "SquadMS\\Calendar\\CalendarServiceProvider",
-                "SquadMS\\Calendar\\Providers\\EloquentServiceProvider.php",
                 "SquadMS\\Calendar\\Providers\\FilamentServiceProvider",
                 "SquadMS\\Calendar\\Providers\\ModulesServiceProvider",
                 "SquadMS\\Calendar\\Providers\\PermissionsServiceProvider",
