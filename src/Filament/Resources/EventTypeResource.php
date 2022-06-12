@@ -2,7 +2,7 @@
 
 namespace SquadMS\Calendar\Filament\Resources;
 
-use SquadMS\Calendar\Filament\Resources\EventResource\Pages;
+use SquadMS\Calendar\Filament\Resources\EventTypeResource\Pages;
 use SquadMS\Calendar\Models\EventType;
 use Filament\Forms;
 use Filament\Resources\Form;
