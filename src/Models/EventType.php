@@ -1,6 +1,6 @@
 <?php
 
-namespace SquadMS\Calender\Models;
+namespace SquadMS\Calendar\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
