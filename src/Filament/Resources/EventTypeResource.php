@@ -9,7 +9,7 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use SquadMS\Foundation\Resources\Concerns\Translatable;
+use SquadMS\Foundation\Filament\Resources\Concerns\Translatable;
 
 class EventTypeResource extends Resource
 {
