@@ -2,9 +2,9 @@
 
 namespace SquadMS\Calendar\Models;
 
+use Carbon\CarbonPeriod;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Carbon\CarbonPeriod;
 use MaddHatter\LaravelFullcalendar\Contracts\Event as EventContract;
 use MaddHatter\LaravelFullcalendar\Contracts\IdentifiableEvent;
 use MaddHatter\LaravelFullcalendar\Contracts\OptionableEvent;
@@ -24,7 +24,7 @@ class Event extends Model implements EventContract, IdentifiableEvent, Optionabl
         'start',
         'end',
         'google_calendar_id',
-    ];   
+    ];
 
     /**
      * The attributes that should be mutated to dates.
@@ -41,7 +41,8 @@ class Event extends Model implements EventContract, IdentifiableEvent, Optionabl
      *
      * @return string
      */
-    public function id() : string {
+    public function id(): string
+    {
         return $this->id;
     }
 
@@ -50,7 +51,8 @@ class Event extends Model implements EventContract, IdentifiableEvent, Optionabl
      *
      * @return string
      */
-    public function title() : string {
+    public function title(): string
+    {
         return $this->title;
     }
 
@@ -59,8 +61,9 @@ class Event extends Model implements EventContract, IdentifiableEvent, Optionabl
      *
      * @return bool
      */
-    public function allDay() : bool {
-        return (bool)$this->all_day;
+    public function allDay(): bool
+    {
+        return (bool) $this->all_day;
     }
 
     /**
@@ -68,7 +71,8 @@ class Event extends Model implements EventContract, IdentifiableEvent, Optionabl
      *
      * @return DateTime
      */
-    public function start() : \DateTimeInterface {
+    public function start(): \DateTimeInterface
+    {
         return $this->start;
     }
 
@@ -77,7 +81,8 @@ class Event extends Model implements EventContract, IdentifiableEvent, Optionabl
      *
      * @return DateTime
      */
-    public function end() : \DateTimeInterface {
+    public function end(): \DateTimeInterface
+    {
         return $this->end;
     }
 
@@ -86,11 +91,11 @@ class Event extends Model implements EventContract, IdentifiableEvent, Optionabl
      *
      * @return DateTime
      */
-    public function options() : array
+    public function options(): array
     {
         return [
             'type' => $this->type,
-            'description' => (string)Str::of($this->description)->replace("\r\n", '<br>')->replace("\n", '<br>'),
+            'description' => (string) Str::of($this->description)->replace("\r\n", '<br>')->replace("\n", '<br>'),
         ];
     }
 
@@ -99,7 +104,7 @@ class Event extends Model implements EventContract, IdentifiableEvent, Optionabl
      *
      * @return DateTime
      */
-    public function period() : CarbonPeriod
+    public function period(): CarbonPeriod
     {
         return new CarbonPeriod($this->start, $this->all_day ? $this->start->copy()->endOfDay() : $this->end);
     }

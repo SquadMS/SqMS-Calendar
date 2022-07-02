@@ -2,20 +2,20 @@
 
 namespace SquadMS\Calendar\Filament\Resources;
 
-use SquadMS\Calendar\Filament\Resources\EventResource\Pages;
-use SquadMS\Calendar\Models\Event;
+use Carbon\Carbon;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use SquadMS\Calendar\Filament\Resources\EventResource\Pages;
+use SquadMS\Calendar\Models\Event;
 use SquadMS\Foundation\Filament\Resources\Concerns\Translatable;
-use Carbon\Carbon;
 
 class EventResource extends Resource
 {
     use Translatable;
-    
+
     protected static ?string $navigationGroup = 'Calendar Management';
 
     protected static ?string $model = Event::class;
@@ -31,11 +31,11 @@ class EventResource extends Resource
                     ->required(),
                 Forms\Components\MarkdownEditor::make('description')
                     ->nullable(),
-                
+
                 Forms\Components\Toggle::make('all_day')
                     ->default(true)
                     ->required(),
-              
+
                 Forms\Components\DateTimePicker::make('start')
                     ->default(Carbon::now())
                     ->required(),
@@ -57,14 +57,14 @@ class EventResource extends Resource
                 //
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [

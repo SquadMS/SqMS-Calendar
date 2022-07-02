@@ -25,8 +25,8 @@ class CalendarServiceProvider extends ServiceProvider
     {
         /* Configuration */
         $this->mergeConfigFrom(__DIR__.'/../config/sqms-calendar.php', 'sqms-calendar');
-        
+
         /* Load Migrations */
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 }

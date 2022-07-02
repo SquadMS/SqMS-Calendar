@@ -3,8 +3,8 @@
 namespace SquadMS\Calendar\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use SquadMS\Foundation\Facades\SquadMSModuleRegistry;
 use SquadMS\Calendar\SquadMSModule;
+use SquadMS\Foundation\Facades\SquadMSModuleRegistry;
 
 class ModulesServiceProvider extends ServiceProvider
 {

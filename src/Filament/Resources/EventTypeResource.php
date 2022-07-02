@@ -2,19 +2,19 @@
 
 namespace SquadMS\Calendar\Filament\Resources;
 
-use SquadMS\Calendar\Filament\Resources\EventTypeResource\Pages;
-use SquadMS\Calendar\Models\EventType;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use SquadMS\Calendar\Filament\Resources\EventTypeResource\Pages;
+use SquadMS\Calendar\Models\EventType;
 use SquadMS\Foundation\Filament\Resources\Concerns\Translatable;
 
 class EventTypeResource extends Resource
 {
     use Translatable;
-    
+
     protected static ?string $navigationGroup = 'Calendar Management';
 
     protected static ?string $model = EventType::class;
@@ -27,7 +27,7 @@ class EventTypeResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->rules('required|string|min:1|max:255')
-                    ->required()
+                    ->required(),
             ]);
     }
 
@@ -41,14 +41,14 @@ class EventTypeResource extends Resource
                 //
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [

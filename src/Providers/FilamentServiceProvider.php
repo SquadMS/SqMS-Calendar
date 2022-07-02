@@ -11,7 +11,7 @@ class FilamentServiceProvider extends PluginServiceProvider
 {
     protected array $resources = [
         EventResource::class,
-        EventTypeResource::class
+        EventTypeResource::class,
     ];
 
     public function configurePackage(Package $package): void

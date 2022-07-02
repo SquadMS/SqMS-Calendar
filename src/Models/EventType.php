@@ -13,5 +13,5 @@ class EventType extends Model
      */
     protected $fillable = [
         'name',
-    ];   
+    ];
 }

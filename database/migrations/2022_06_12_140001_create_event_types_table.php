@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('event_types', function (Blueprint $table) {
             $table->bigIncrements('id');
-          
+
             $table->text('name');
 
             $table->timestamps();
